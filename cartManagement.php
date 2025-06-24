@@ -10,7 +10,7 @@ $customerID = $_SESSION['customerID'];
 $query = "SELECT Name, phoneNumber, Email, Address,customerImage FROM customer WHERE customerID = '$customerID'";
 $result = mysqli_query($conn, $query);
 $customer = mysqli_fetch_assoc($result);
-
+ahauy
 function generateCustomID($conn, $prefix, $table, $idColumn) {
     $query = "SELECT $idColumn FROM `$table` WHERE $idColumn LIKE '$prefix%' ORDER BY $idColumn DESC LIMIT 1";
     $result = $conn->query($query);

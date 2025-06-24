@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $query);
 $customer = mysqli_fetch_assoc($result);
 
 $profileImage = !empty($customer['customerImage']) ? 'uploads/profile/' . $customer['customerImage'] : 'images/empty-profile.jpg';
-
+$add = 2;
 $total_items_query = "SELECT COUNT(DISTINCT CONCAT(productID, '-', `size`)) AS totalItems 
                       FROM shoppingCart 
                       WHERE customerID = '$customerID'";
