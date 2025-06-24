@@ -1,0 +1,109 @@
+INSERT INTO customer (customerID, Name, gender, PhoneNumber, Address, Email, Password, customerImage) VALUES
+('CUS001','Christiano Ronaldo','Male','081908196194','Jl. Bendungan Hilir 14 No.23, RT.4/RW.3, Bend. Hil','ronaldo@gmail.com','$2y$10$X28IBjHl0ebAfZZNPa9.AOzJZpAu8ztRei99b2r.l8kiJNKMYN9Gm','9685.jpg');
+
+INSERT INTO `store` (`storeID`, `storename`, `storePhoneNum`, `storeEmail`, `storeAddress`, `password`, `storeImage`) VALUES
+('STR001', 'Nike', 829182729, 'nike@gmail', 'Jl. Asia Afrika No.19, RT.1/RW.3, Gelora, Kecamata', '$2y$10$3jO5Iq0HbEKYfSOAFchqueGmwKRPwzRi7Af7.Gozn7BLL0YaMmfrm', 'nikeLogo.png'),
+('STR002', 'Puma', 231892739, 'puma@gmail', 'Jl. Jenderal Sudirman No.52-53, RT.5/RW.3, Senayan', '$2y$10$91Z/uAju96dO4FsS4NTIpe5A/bWQe0uFM1R5zX/imp9YdlGkQCJ3i', 'pumaLogo.png'),
+('STR003', 'Converse', 203189389, 'converse@gmail', 'Jl. Puri Indah Raya Unit 25, RT.3/RW.2, South Kemb', '$2y$10$aTaFOUUVVeS9SBxuKB6SCeHo8SIrAdERFp.monDaX93/WlGNaRDCO', 'converseLogo.png'),
+('STR004', 'Adidas', 231029389, 'adidas@gmail.com', 'Jl. Puri Indah Raya Blok U1 17, RT.3/RW.2, Kembang', '$2y$10$5Kzzw0WR/rC0n27DJtpGM.BhTQYOHUta0y8wPqc4JRWUg3Xs1TYRS', 'adidasLogo.png'),
+('STR005', 'Uniqlo', 21312314, 'uniqlo@gmail', 'Mal Taman Anggrek - UGF, Jl. Letjen S. Parman No.K', '$2y$10$mLsSuqXg4.BvXneEYiluV.VgTkkYXOgqg9HHlJk96vSULVIGE11XG', 'uniqloLogo.png'),
+('STR006', 'Zara Official', 97284917, 'zara@gmail', 'Plaza Senayan, Jl. Asia Afrika No.8 Lt. 2, RT.1/RW', '$2y$10$zOOP2iJ/ouOoG2roXv/wgeqLHFrIPa0Cg.PRPUaFGFptMfE8i5KnS', 'zaraLogo.png'),
+('STR007', 'Versace', 288498, 'versace@gmail', 'Plaza Indonesia, Unit L1-15F, Jl. M.H. Thamrin No.', '$2y$10$uH4ipg5Sk.iju7kGx/4OPuBiFCSwfpr7cXGWpXvsPtyBUaT9wGPx.', 'versaceLogo.png'),
+('STR008', 'Rolex', 21313111, 'rolex@gmail', 'Chem. du Pont-du-Centenaire 113, 1228 Genève, Swis', '$2y$10$ubHXsNBjfxaIW1LNac9/OegmMj4aHuVP053BmdRbBtDr4bGvCSvym', 'rolexLogo.png'),
+('STR009', 'Dr Martens', 22299489, 'drmartens@gmail', 'Via Torino, 49, 20123 Milano MI, Italia', '$2y$10$jb1nXKvhEe4YhqTp2Mw7ledagf3GhXUGR5a/AiEWkx1JEDoNBh2pK', 'drmartensLogo.png');
+
+INSERT INTO `delivery` (`deliveryID`, `deliveryType`, `deliveryFee`) VALUES
+('FE', 'FedEx', 5.00),
+('LP', 'Lion Parcel', 3.00),
+('NE', 'Ninja Express', 2.00),
+('SC', 'Sicepat', 2.00);
+
+INSERT INTO `payment` (`paymentTypeID`, `paymentType`, `adminFee`, `paymentIcon`) VALUES
+('BC', 'BCA', 2.50, 'bca.png'),
+('DA', 'Dana', 2.00, 'dana.png'),
+('GP', 'Gopay', 2.00, 'gopay.png'),
+('OV', 'OVO', 3.50, 'OVO.png'),
+('SB', 'SeaBank', 1.50, 'seabank.png');
+
+INSERT INTO `sizecategory` (`sizeType`) VALUES
+('bags'),
+('footwear'),
+('fragrance'),
+('general');
+
+INSERT INTO `sizelist` (`size`, `sizeType`) VALUES
+('100ml', 'fragrance'),
+('10oz', 'bags'),
+('150ml', 'fragrance'),
+('15ml', 'fragrance'),
+('15oz', 'bags'),
+('20ml', 'fragrance'),
+('20oz', 'bags'),
+('30oz', 'bags'),
+('37', 'footwear'),
+('38', 'footwear'),
+('39', 'footwear'),
+('40', 'footwear'),
+('40oz', 'bags'),
+('41', 'footwear'),
+('42', 'footwear'),
+('43', 'footwear'),
+('44', 'footwear'),
+('50ml', 'fragrance'),
+('L', 'general'),
+('M', 'general'),
+('S', 'general'),
+('XL', 'general'),
+('XS', 'general'),
+('XXL', 'general');
+
+INSERT INTO `productcategory` (`productTypeID`, `productType`, `sizeType`) VALUES
+('AC', 'Accessories', 'general'),
+('BA', 'Bag', 'bags'),
+('BU', 'Bundling', 'general'),
+('JT', 'Jeans & Trousers', 'general'),
+('OW', 'Outerwear', 'general'),
+('PE', 'Perfume', 'fragrance'),
+('SH', 'Shoes', 'footwear'),
+('SO', 'Shorts', 'general'),
+('TO', 'Tops', 'general');
+
+INSERT INTO `product` (`productID`, `productTypeID`, `storeID`, `productName`, `productDescription`, `price`, `stock`, `productImage`) VALUES
+('PRO005', 'TO', 'STR006', 'Long Navy Blazer', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 35, 109, 'product3.png'),
+('PRO006', 'JT', 'STR006', 'Oversize Baggy Trousers', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 31, 100, 'product2.png'),
+('PRO007', 'TO', 'STR006', 'Green Sweetshirt Zipper Collar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 29, 150, 'product1.png'),
+('PRO008', 'SH', 'STR001', 'Nike Air Force 1', 'Comfortable, durable and timeless—its number one for a reason. The classic 80s construction pairs smooth leather with bold details for style that tracks whether youre on court or on the go.', 187, 100, 'NikeProduct1.png'),
+('PRO009', 'SH', 'STR001', 'Nike Air Force 1 1\\\'07 LV8', 'Comfortable, durable and timeless—it\\\'s number one for a reason. The classic \\\'80s construction pairs with bold details for style that tracks whether you\\\'re on court or on the go.', 150, 200, 'AF1 1\'07 LV8.png'),
+('PRO010', 'SH', 'STR001', 'Nike Air Force 1 LV8', 'Comfortable, durable and timeless—it\\\'s number one for a reason. The classic \\\'80s construction pairs with bold details for style that tracks whether you\\\'re on court or on the go.', 149, 200, 'AF1 LV8.png'),
+('PRO011', 'SH', 'STR001', 'Nike Cortez SE', 'You spoke. We listened. Based on your feedback, we\\\'ve revamped the original Cortez while maintaining the retro appeal you know and love. It has a wider toe area and firmer side panels, so you can comfortably wear them all day without any warping. This special edition features smooth leather and debossed branding for an elevated, monochromatic finish. Cortez fans—this one\\\'s for you.', 125, 350, 'C SE.png'),
+('PRO012', 'TO', 'STR001', 'Jordan Shirt', 'Made from soft cotton, this classic tee puts heritage Jordan graphics front and centre. What more do you need?', 24, 500, 'Jordan tops.png'),
+('PRO013', 'SH', 'STR001', 'Air Jordan 1 Low SE', 'This fresh take on the AJ1 brings new energy to neutrals. Smooth, premium leather and classic Nike Air cushioning give you the quality and comfort you\\\'ve come to expect from Jordan.', 210, 90, 'Air Jordan low SE.png'),
+('PRO014', 'SH', 'STR001', 'Nike Air Jordan Mid 1', 'Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity.', 190, 100, 'Air Jordan Mid 1.png'),
+('PRO015', 'SH', 'STR001', 'Nike Slides Offcourt Adjust', 'Post game, errands and more—adjust your comfort on the go. The adjustable, padded strap lets you perfect your fit, while the lightweight foam midsole brings first-class comfort to your feet.', 35, 255, 'Offcourt Adjust.png'),
+('PRO016', 'AC', 'STR007', 'Medusa Biggie necklace', 'The model is 1.88 m wearing size OS', 689, 25, 'Versace.png'),
+('PRO017', 'AC', 'STR008', 'Daytona Desert Eagle', 'A new take on a classic style, the Daytona is named after Daytona Beach, the city where the International Speedway Race takes place. Defined by its tachymeter scale and multiple chronograph counters, this edition takes on a new nickname dubbed the Desert Eagle Arabic that is comfortable and made from lightweight carbon fiber with a fabric strap.', 65250, 10, 'Rolex.png'),
+('PRO018', 'AC', 'STR008', ' GMT-Master II Oasis 40mm', 'Designa Individual is known for its customised approach towards some of the world\\\'s most instantly recognisable timepieces. The label takes this Rolex GMT-Master II 40mm and gives it a stealthy new finish, with a two-tone carbon design of beige and black, with a durable fabric strap.', 1580, 250, 'Rolex2.png'),
+('PRO019', 'SH', 'STR009', ' 1461 Quad Polished Black', 'Shoes by Dr Martens This item is excluded from promo Lace-up fastening Round toe Contrast stitching Chunky sole Signature textured tread', 250, 45, 'drMartens.png'),
+('PRO020', 'SH', 'STR009', '1461 Smooth Quad', 'Shoes by Dr Martens This item is excluded from promo Lace-up fastening Round toe Contrast stitching Chunky sole Signature textured tread', 59, 120, 'drMartens2.png'),
+('PRO021', 'SH', 'STR003', 'Vintage Golden Goose', 'Limited signature star patch to the sides', 617, 34, 'GoldenGoose.png'),
+('PRO022', 'SH', 'STR003', 'Chuck Taylor Lit Lether', 'kon Converse dari tahun 1970 yang dikerjakan ulang untuk masa kini dengan pembuatan superior dan bahan-bahan premium. Yang terbaik dari yang terbaik', 105, 300, 'converse2.png'),
+('PRO023', 'BU', 'STR003', 'Streetwear Set Chuck Taylor ', 'Converse streetwear bundling set', 350, 70, 'converse3.png'),
+('PRO024', 'AC', 'STR007', 'Embossed Denim Cap', 'Signature original versace cap ', 68, 150, 'Versace2.png'),
+('PRO025', 'TO', 'STR006', 'Textured Cream Polo Shirt', 'Kemeja polo regular fit. Kerah lapel dengan belahan depan. Lengan pendek. Bagian bawah selesaian rib.', 25, 1500, 'catShirts.png'),
+('PRO026', 'JT', 'STR006', 'Oversize Button Trousers', 'Relaxed fit trousers made of high-elastic cotton technical fabric. Elastic waistband with drawstring. Front pockets and back patch pocket details.', 32, 1500, 'catTrousers.png'),
+('PRO027', 'OW', 'STR006', 'Zipper Bomber Jacket', 'Regular fit jacket made of linen fabric. Stand collar and long sleeves. Passpoil pockets at hips and inner pocket details. Rib finish. Zipper front closure.', 28, 1500, 'catOuterwear.png'),
+('PRO028', 'BU', 'STR003', 'Forest Edition Bundling Set', 'Converse bundling set style', 125, 1500, 'catBundling.png'),
+('PRO029', 'SH', 'STR003', 'Biege Anniversary Edittion', 'Converse shoes anniversary edittion', 235, 2000, 'catShoes.png'),
+('PRO030', 'SO', 'STR003', 'Cargo Biege Street Shorts', 'converse shorts collection', 24, 1200, 'catShorts.png'),
+('PRO031', 'BA', 'STR009', 'Business Man Snake Leather Bag', 'Authentic Snake Leather bags dedicated for business man', 55, 2500, 'catBags.png'),
+('PRO032', 'AC', 'STR007', '5 Carats Gold Bracelet And Ring', 'Versace Premium Accessories 5 Carats Of Golds', 450, 1000, 'catAccessories.png'),
+('PRO033', 'PE', 'STR007', 'SI Soft And Sweet Fragrance', 'Versace perfume collection', 80, 2500, 'catPerfume.png');
+
+INSERT INTO hotdeals (`productID`, `discount`, `finalPrice`) VALUES
+('PRO005', 21.00, 27.65),
+('PRO006', 35.00, 20.15),
+('PRO007', 50.00, 14.50),
+('PRO009', 50.00, 75.00),
+('PRO012', 20.00, 19.20),
+('PRO015', 10.00, 31.50);
+
